@@ -1,0 +1,26 @@
+CREATE TABLE womens_clothing_store (id INTEGER PRIMARY KEY, name TEXT, dollar_price INTEGER, color TEXT, size TEXT, material TEXT)
+;
+INSERT INTO womens_clothing_store VALUES
+(1, 'blouse', 12.99, 'creme, grey, sage', 'S,M,L', 'cotton blend'),
+(2, 'tank top', 5.50, 'black, white, nude', 'S,M,L', 'cotton blend'),
+(3,'long sleeve', 10.50,'maroon, navy blue, black', 'S,M', 'wool'),
+(4, 'plain t-shirt', 9.99, 'white, army green, pink', 'M,L', 'linen'),
+(5, 'bralett', 5, 'white, black, nude', 'S,M,L', 'cotton blend'),
+(6, 'socks', 2, 'white, black', 'S,M,L', 'cotton blend'),
+(7, 'underwear', 2, 'nude, black', 'S,M,L', 'cotton blend'),
+(8, 'shorts', 14, 'blue denim', 'S,M,L', 'cotton blend'),
+(9, 'long skirt', 13, 'light blue, black, cheetah print', 'S,M,L', 'silk'),
+(10, 'short skirt', 14, 'black, navy blue, emerald green', 'S,M', 'cotton blend'),
+(11, 'skort', 13.99, 'khaki, brown, lilac', '2,4,6,8', 'denim'),
+(12, 'jeans', 24.99, 'light blue, dark blue, black', '0,2,6,8,12', 'denim'),
+(13, 'capris', 16.50, 'emerald green, burgandy, light grey', 'S,M,L', 'cotton blend'),
+(14, 'maxi dress', 18.99, 'mustard yellow, burnt orange', 'S,M,L', 'silk'),
+(15, 'blazer', 22.50, 'black, grey, creme', 'S,M,L', 'suede')
+;
+SELECT * FROM womens_clothing_store
+;
+SELECT * FROM womens_clothing_store WHERE dollar_price >=10
+;
+SELECT * FROM womens_clothing_store WHERE dollar_price >=10 ORDER BY dollar_price asc
+;
+SELECT * FROM womens_clothing_store WHERE material='cotton blend' and dollar_price >=10 ORDER BY dollar_price asc
