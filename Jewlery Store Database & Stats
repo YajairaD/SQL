@@ -1,7 +1,7 @@
-CREATE TABLE jewlery (id INTEGER PRIMARY KEY, name TEXT, price INTEGER, weight INTEGER, material TEXT, in_stock TEXT);
+CREATE TABLE jewelry (id INTEGER PRIMARY KEY, name TEXT, price INTEGER, weight INTEGER, material TEXT, in_stock TEXT);
 
 INSERT INTO 
-jewlery
+jewelry
 VALUES
 (1, "Beaded Huggie Hoops", 100, 3, "14k yellow and white gold", "yes"),
 (2, "Pearl drop earrings", 98, 2, "18k yellow gold", "yes"),
@@ -19,13 +19,13 @@ VALUES
 (14, "Serpentine chain necklace", 498, 11, "14k yellow and white gold", "yes"),
 (15, "Satellite necklace", 98, 3, "gold vermeil", "yes")
 ;
-SELECT * FROM jewlery;
+SELECT * FROM jewelry;
 
 
-SELECT * FROM jewlery 
+SELECT * FROM jewelry 
 ORDER BY price ASC;
 
-SELECT * FROM jewlery
+SELECT * FROM jewelry
 WHERE material = "14k yellow gold"
 ORDER BY price DESC;
 
