@@ -1,0 +1,33 @@
+CREATE TABLE jewlery (id INTEGER PRIMARY KEY, name TEXT, price INTEGER, weight INTEGER, material TEXT, in_stock TEXT);
+
+INSERT INTO 
+jewlery
+VALUES
+(1, "Beaded Huggie Hoops", 100, 3, "14k yellow and white gold", "yes"),
+(2, "Pearl drop earrings", 98, 2, "18k yellow gold", "yes"),
+(3, "Round topaz studs", 58, 1, "sterling silver", "no"),
+(4, "Tube large hoops", 78, 3, "gold vermeil and sterling silver","yes"),
+(5, "Block small hoops", 75, 2, "14k yellow and white gold", "no"),
+(6, "Beaded ring", 98, 2.5, "14K yellow and white gold", "yes"),
+(7, "Wishbone stacker set", 398, 5, "14k white gold", "yes"),
+(8, "Duo ring", 298, 3, "14k yellow gold", "no"),
+(9, "Baguette emerald open ring", 278, 4, "14k yellow gold", "yes"),
+(10, "Solo diamond ring", 228, 3, "14K yellow and white gold", "yes"),
+(11, "Chain necklace", 50, 2, "sterling silver", "yes"),
+(12, "Tiny pearl necklace", 98, 7, "gold vermeil", "no"),
+(13, "Bold herringbone chain", 198, 10, "gold vermeil", "yes"),
+(14, "Serpentine chain necklace", 498, 11, "14k yellow and white gold", "yes"),
+(15, "Satellite necklace", 98, 3, "gold vermeil", "yes")
+;
+SELECT * FROM jewlery;
+
+
+SELECT * FROM jewlery 
+ORDER BY price ASC;
+
+SELECT * FROM jewlery
+WHERE material = "14k yellow gold"
+ORDER BY price DESC;
+
+
+
