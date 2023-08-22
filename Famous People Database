@@ -79,6 +79,12 @@ SELECT famous_people.name, popular_songs.song_name, popular_songs.album_name
     ON famous_people.id=popular_songs.famous_people_id
     WHERE famous_people.career = "artist" 
 ;
-
-
+SELECT famous_people.name, dating.partner_name
+    FROM famous_people
+    LEFT JOIN dating
+    ON famous_people.id=dating.famous_people_id
+    WHERE famous_people.age <35 AND famous_people.career = "artist" 
+    ORDER BY famous_people.name
+;
+    
 
