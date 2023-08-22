@@ -1,0 +1,84 @@
+/* Create table about the people and what they do here */
+
+CREATE TABLE famous_people
+    (id INTEGER PRIMARY KEY AUTOINCREMENT,
+    name TEXT,
+    age INTEGER,
+    career TEXT) 
+;
+INSERT INTO famous_people (name, age, career) VALUES
+    ("Taylor Swift", 33, "artist"),
+    ("Taylor Lautner", 31, "actor"),
+    ("Zendeya Stoermer", 26, "actor"),
+    ("Tom Holland", 27, "actor"),
+    ("Zooey Deschanel", 43, "actor"),
+    ("Timothee Chalamet", 27, "actor"),
+    ("Jennifer Lawrence", 33, "actor"),
+    ("Sarah J Mass", 37, "author"),
+    ("Jennifer Armentrout", 43, "author"),
+    ("Benito Antonio Martinez", 28, "artist"),
+    ("Carolina Giraldo Navarro", 32, "artist")
+
+;
+
+CREATE TABLE popular_songs
+    (id INTEGER PRIMARY KEY,
+    famous_people_id INTEGER,
+    song_name TEXT,
+    album_name TEXT) 
+;
+INSERT INTO popular_songs VALUES
+    (1, 1, "...Ready For It?", "reputation"),
+    (2, 1, "Delicate", "repuation"),
+    (3, 1, "King of my Heart", "reputation"),
+    (4, 1, "Lover", "Lover"),
+    (5, 1, "False God", "Lover"),
+    (6, 1, "Lavender Haze", "Midnights"),
+    (7, 1, "Vigilante Shit", "Midnights"),
+    (8, 10, "Titi Me Pregunto", "Un Verano Sin Ti"),
+    (9, 10, "Neverita", "Un Verano Sin Ti"),
+    (10, 10, "Callaita", "Un Verano Sin Ti"),
+    (11, 10, "La Dificil", "YHLQMDLG"),
+    (12, 10, "Yo Perreo Sola", "YHLQMDLG"),
+    (13, 10, "Safaera", "YHLQMDLG"),
+    (14, 11, "Besties", "Manana Sera Bonito"),
+    (15, 11, "Gucci Los Panos", "Manana Sera Bonito"),
+    (16, 11, "TQG", "Manana Sera Bonito"),
+    (17, 11, "Mi Ex Tenia Razon", "Manana Sera Bonito Bichota Season"),
+    (18, 11, "Qlona", "Manana Sera Bonito Bichota Season"),
+    (19, 11, "Una Noche en Medellin - Remix", "Manana Sera Bonito Bichota Season"),
+    (20, 11, "Oki Doki", "Manana Sera Bonito Bichota Season") 
+    ;
+CREATE TABLE dating 
+(id INTEGER PRIMARY KEY AUTOINCREMENT, 
+famous_people_id INTEGER, 
+partner_name TEXT)
+;
+INSERT INTO dating (famous_people_id, partner_name) VALUES
+    (2, "Taylor Dome"),
+    (3, "Tom Holland"),
+    (4, "Zendaya Stoemer"),
+    (5, "Jonathan Scott"),
+    (7, "Cooke Maroney"),
+    (8, "Josh Maas"),
+    (10, "Gabriela Berlingeri"),
+    (11, "Salomon Villada Hoyos")
+;
+SELECT * FROM famous_people
+;
+SELECT * FROM dating 
+;
+SELECT famous_people.name, dating.partner_name
+    FROM famous_people 
+    LEFT JOIN dating 
+    ON famous_people.id=dating.famous_people_id 
+;
+SELECT famous_people.name, popular_songs.song_name, popular_songs.album_name
+    FROM famous_people
+    LEFT JOIN popular_songs 
+    ON famous_people.id=popular_songs.famous_people_id
+    WHERE famous_people.career = "artist" 
+;
+
+
+
