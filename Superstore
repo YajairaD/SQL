@@ -37,11 +37,14 @@ FROM superstore
 GROUP BY item_name
 ORDER BY (average_rating) DESC
 ;
-#SELECT category, "items_sold"
+SELECT MAX(average_rating), item_name
 FROM superstore
-ORDER BY COUNT(category) as "items_sold"#
 ;
 SELECT "item_name", MAX(price)
 FROM superstore
 WHERE category ="Kitchen Supplies"
+;
+SELECT AVG(price)
+FROM superstore
+WHERE category = 'Kitchen Supplies'
 ;
